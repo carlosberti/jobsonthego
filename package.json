@@ -6,6 +6,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
+		"test:watch": "react-scripts test --watch",
 		"eject": "react-scripts eject",
 		"lint": "eslint . --fix --max-warnings=0",
 		"format": "prettier . --write",
@@ -48,5 +49,22 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"jest": {
+		"collectCoverageFrom": [
+			"src/**/*.{ts,tsx}",
+			"!**/node_modules/**"
+		],
+		"coverageReporters": [
+			"text-summary",
+			"lcov",
+			"cobertura"
+		],
+		"testMatch": [
+			"**/*.test.{ts,tsx}"
+		],
+		"moduleNameMapper": {
+			"@/(.*)": "<rootDir>/src/$1"
+		}
 	}
 }

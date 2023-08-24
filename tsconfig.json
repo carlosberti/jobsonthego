@@ -16,7 +16,10 @@
 		"moduleDetection": "force",
 		"noEmit": true,
 		"jsx": "react-jsx",
-		"noUncheckedIndexedAccess": true
+		"noUncheckedIndexedAccess": true,
+		"paths": {
+			"@/*": ["./src/*"]
+		}
 	},
 	"include": ["src", "env.d.ts"]
 }
