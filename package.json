@@ -6,7 +6,6 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"test:watch": "react-scripts test --watch",
 		"eject": "react-scripts eject",
 		"lint": "eslint . --fix --max-warnings=0",
 		"format": "prettier . --write",
@@ -66,5 +65,12 @@
 		"moduleNameMapper": {
 			"@/(.*)": "<rootDir>/src/$1"
 		}
+	},
+	"lint-staged": {
+		"src/**/*": [
+			"npm run lint",
+			"npm run format",
+			"npm run test --findRelatedTests --bail -- --watchAll=false"
+		]
 	}
 }
