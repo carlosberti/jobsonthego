@@ -67,7 +67,9 @@ export type JobData = {
 type Response = JobData[];
 
 export function getJobsList(): Promise<Response> {
-	return fetch(process.env.REACT_APP_API_URL)
+	return fetch(
+		process.env.REACT_APP_API_URL + '/feeds/7d7e6fd12c614aa5af3624b06f7a74b8/?format=json'
+	)
 		.then((response) => response.json())
 		.then((data) => data);
 }
