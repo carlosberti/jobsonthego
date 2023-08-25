@@ -1,5 +1,5 @@
 export type JobData = {
-	id: string;
+	id: number;
 	benefits: string[];
 	categories: string[];
 	company: {
