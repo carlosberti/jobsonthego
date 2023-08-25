@@ -37,6 +37,7 @@
 		"@craco/craco": "^7.1.0",
 		"@types/dompurify": "^3.0.2",
 		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-import": "^2.28.1",
 		"husky": "^8.0.0",
 		"lint-staged": "^14.0.1",
 		"prettier": "3.0.2",
@@ -70,7 +71,10 @@
 		],
 		"testMatch": [
 			"**/*.test.{ts,tsx}"
-		]
+		],
+		"moduleNameMapper": {
+			"^@/(.+)$": "<rootDir>/src/$1"
+		}
 	},
 	"lint-staged": {
 		"src/**/*": [

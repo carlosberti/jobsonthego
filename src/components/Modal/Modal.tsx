@@ -1,12 +1,13 @@
-import { getJobsList } from '@/actions';
-import { useQuery } from '@tanstack/react-query';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import * as Dialog from '@radix-ui/react-dialog';
-import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
-import * as Toast from '@radix-ui/react-toast';
-import { LinkedInLogoIcon, Share1Icon } from '@radix-ui/react-icons';
-import DOMPurify from 'dompurify';
 import { useEffect, useRef, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import DOMPurify from 'dompurify';
+import * as Dialog from '@radix-ui/react-dialog';
+import { LinkedInLogoIcon, Share1Icon } from '@radix-ui/react-icons';
+import * as Toast from '@radix-ui/react-toast';
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
+
+import { getJobsList } from '@/actions';
 
 export function Modal() {
 	const navigate = useNavigate();

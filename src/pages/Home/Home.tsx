@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+
 import { getJobsList } from '@/actions';
 import { JobCard } from '@/components';
 

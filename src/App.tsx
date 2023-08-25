@@ -1,6 +1,7 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router-dom';
-import { PublicRoutes } from './routes';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+import { PublicRoutes } from '@/routes';
 
 const queryClient = new QueryClient();
 

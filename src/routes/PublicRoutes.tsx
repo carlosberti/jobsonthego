@@ -1,6 +1,7 @@
 import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
-import { Header, Modal } from '@/components';
+
 import { Home } from '@/pages';
+import { Header, Modal } from '@/components';
 
 export function PublicRoutes() {
 	return (

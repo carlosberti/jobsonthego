@@ -1,5 +1,68 @@
 {
 	"extends": ["react-app", "react-app/jest", "prettier"],
+	"rules": {
+		"import/order": [
+			"warn",
+			{
+				"newlines-between": "always",
+				"groups": [["external", "builtin"], "internal"],
+				"pathGroups": [
+					{
+						"pattern": "react",
+						"group": "external",
+						"position": "before"
+					},
+					{
+						"pattern": "react-router-dom",
+						"group": "external",
+						"position": "before"
+					},
+					{
+						"pattern": "@tanstack/react-query",
+						"group": "external",
+						"position": "before"
+					},
+					{
+						"pattern": "@radix-ui/*",
+						"group": "external",
+						"position": "after"
+					},
+					{
+						"pattern": "@/routes",
+						"group": "internal",
+						"position": "before"
+					},
+					{
+						"pattern": "@/pages",
+						"group": "internal",
+						"position": "before"
+					},
+					{
+						"pattern": "@/actions",
+						"group": "internal",
+						"position": "before"
+					},
+					{
+						"pattern": "@/components",
+						"group": "internal",
+						"position": "before"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["internal", "react", "@radix-ui/*"],
+				"distinctGroup": false,
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		],
+		"import/no-duplicates": 1,
+		"new-cap": 0,
+		"no-prototype-builtins": 1,
+		"react/jsx-uses-vars": 1,
+		"react/no-unescaped-entities": 1,
+		"react/no-unknown-property": 1
+	},
 	"settings": {
 		"react": {
 			"version": "detect"
