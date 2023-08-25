@@ -34,30 +34,35 @@ export function Modal() {
 						<Link to="/" />
 					</Dialog.Close>
 				</Dialog.Overlay>
-				<Dialog.Content className="absolute left-0 top-0 h-[100dvh] w-full sm:left-[50%] sm:translate-x-[-50%] sm:rounded-md sm:border border-gray-200 bg-white sm:drop-shadow-md focus:outline-none sm:h-[initial] overflow-auto sm:max-h-[80%] sm:w-[80%] sm:max-w-5xl sm:translate-y-[revert] sm:top-[64px]">
+				<Dialog.Content className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-auto border-gray-200 bg-white focus:outline-none sm:bottom-16 sm:left-[50%] sm:top-16 sm:h-[initial] sm:w-[80%] sm:max-w-4xl sm:translate-x-[-50%] sm:rounded-md sm:border sm:drop-shadow-md">
 					{job.company.cover && (
 						<img
 							src={job.company.cover}
 							alt="Company cover"
 							height={256}
-							className="object-cover w-full h-full max-h-64 rounded-t-md relative"
+							className="relative h-full max-h-64 w-full rounded-t-md object-cover"
 						/>
 					)}
 					<div className="p-6">
-						<Dialog.Title className="mb-4 text-2xl text-zinc-900 font-semibold">
-							{job.title}
-						</Dialog.Title>
+						<div className="mb-4 flex items-center gap-3">
+							{job.company.logo && (
+								<img src={job.company.logo} alt="Company logo" width={32} height={32} />
+							)}
+							<Dialog.Title className="text-2xl font-semibold text-zinc-900">
+								{job.title}
+							</Dialog.Title>
+						</div>
 						<div className="flex flex-col gap-5 [&_ul]:list-disc [&_ul_li]:ml-4">
 							<div
-								className="flex flex-col gap-2 text-zinc-900 font-medium"
+								className="flex flex-col gap-2 font-medium text-zinc-900"
 								dangerouslySetInnerHTML={{ __html: sanitizedCompanyDescription }}
 							/>
 							<div
-								className="flex flex-col gap-2 text-zinc-900 font-medium"
+								className="flex flex-col gap-2 font-medium text-zinc-900"
 								dangerouslySetInnerHTML={{ __html: sanitizedJobDescription }}
 							/>
 							<div
-								className="flex flex-col gap-2 text-zinc-900 font-medium"
+								className="flex flex-col gap-2 font-medium text-zinc-900"
 								dangerouslySetInnerHTML={{ __html: sanitizedSkills }}
 							/>
 						</div>
@@ -65,7 +70,7 @@ export function Modal() {
 							to={job.urls.ad}
 							target="_blank"
 							rel="noopener"
-							className="mt-4 text-zinc-900 font-medium inline-block p-2 border border-zinc-900 rounded-md hover:bg-zinc-900 hover:text-white transition-colors"
+							className="mt-4 inline-block rounded-md border border-zinc-900 p-2 font-medium text-zinc-900 transition-colors hover:bg-zinc-900 hover:text-white"
 						>
 							Apply now
 						</Link>

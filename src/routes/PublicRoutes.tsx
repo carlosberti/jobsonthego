@@ -10,7 +10,7 @@ export function PublicRoutes() {
 					path="/"
 					element={
 						<>
-							<div className="sm:flex sm:flex-col sm:min-h-[100dvh] max-w-7xl mx-auto">
+							<div className="mx-auto max-w-7xl sm:flex sm:min-h-[100dvh] sm:flex-col">
 								<Header />
 								<Home />
 							</div>

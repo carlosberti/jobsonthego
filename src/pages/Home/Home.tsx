@@ -14,7 +14,7 @@ export function Home() {
 	}
 
 	return (
-		<div className="flex flex-col gap-4 px-3 pb-6 sm:px-6 sm:pb-8 sm:flex-row sm:flex-wrap sm:justify-center">
+		<div className="flex flex-col gap-4 px-3 pb-6 sm:flex-row sm:flex-wrap sm:justify-center sm:px-6 sm:pb-8">
 			{data.map((job) => (
 				<JobCard key={job.id} {...job} />
 			))}

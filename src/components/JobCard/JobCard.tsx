@@ -51,20 +51,20 @@ export function JobCard({
 
 	return (
 		<Link to={`/job/${id}`}>
-			<div className="flex flex-col p-4 lg:p-5 shadow-md gap-2 rounded-md sm:max-w-sm sm:min-w-[240px] sm:h-fit">
-				<div className="flex gap-3 items-center">
+			<div className="flex flex-col gap-2 rounded-md p-4 shadow-md sm:h-fit sm:min-w-[240px] sm:max-w-sm lg:p-5">
+				<div className="flex items-center gap-3">
 					{company.logo && <img src={company.logo} alt="Company logo" width={32} height={32} />}
-					<p className="text-zinc-900 line-clamp-1">{company.name}</p>
+					<p className="line-clamp-1 text-zinc-900">{company.name}</p>
 				</div>
-				<h2 className="mb-2 text-zinc-900 font-semibold">{title}</h2>
+				<h2 className="mb-2 font-semibold text-zinc-900">{title}</h2>
 				<div className="mb-2 columns-2">
-					<p className="text-sm text-zinc-900 font-medium">{employmentType}</p>
-					<p className="text-sm text-zinc-900 font-medium">{company.industry}</p>
-					<p className="text-sm text-zinc-900 font-medium">{experience}</p>
-					<p className="text-sm text-zinc-900 font-medium">language: {language}</p>
+					<p className="text-sm font-medium text-zinc-900">{employmentType}</p>
+					<p className="text-sm font-medium text-zinc-900">{company.industry}</p>
+					<p className="text-sm font-medium text-zinc-900">{experience}</p>
+					<p className="text-sm font-medium text-zinc-900">language: {language}</p>
 				</div>
-				<div className="pt-3 border-t border-gray-200">
-					<p className="text-sm text-zinc-900 font-light">{getDaysSincePublished()}</p>
+				<div className="border-t border-gray-200 pt-3">
+					<p className="text-sm font-light text-zinc-900">{getDaysSincePublished()}</p>
 				</div>
 			</div>
 		</Link>
