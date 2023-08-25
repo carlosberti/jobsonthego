@@ -3,7 +3,7 @@ export type JobData = {
 	benefits: string[];
 	categories: string[];
 	company: {
-		id: string;
+		id: number;
 		slug: string;
 		name: string;
 		name_internal: string;
@@ -56,7 +56,7 @@ export type JobData = {
 	};
 	internal_reference: string | null;
 	owner: {
-		id: string;
+		id: number;
 		name: string;
 		email: string;
 	};

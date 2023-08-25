@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { getJobsList } from '../actions/getJobsList';
-import { Card } from '../components/Card';
+import { getJobsList } from '@/actions';
+import { JobCard } from '@/components';
 
 export function Home() {
 	const { isLoading, error, data } = useQuery(['jobsList'], getJobsList);
@@ -16,7 +16,7 @@ export function Home() {
 	return (
 		<div className="bg-red-50">
 			{data.map((job) => (
-				<Card key={job.id} {...job} />
+				<JobCard key={job.id} {...job} />
 			))}
 		</div>
 	);
