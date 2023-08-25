@@ -70,7 +70,7 @@
 		"src/**/*": [
 			"npm run lint",
 			"npm run format",
-			"npm run test --findRelatedTests --bail -- --watchAll=false"
+			"npm run test --findRelatedTests --bail -- --watchAll=false --passWithNoTests"
 		]
 	}
 }
