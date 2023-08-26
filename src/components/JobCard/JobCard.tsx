@@ -4,39 +4,17 @@ import { type JobData } from '@/actions';
 
 export type JobCardProps = Pick<
 	JobData,
-	| 'id'
-	| 'company'
-	| 'contact'
-	| 'descr'
-	| 'employment_type'
-	| 'experience'
-	| 'from_date'
-	| 'function'
-	| 'language'
-	| 'linkedInCompanyId'
-	| 'locations'
-	| 'title'
-	| 'urls'
-	| 'owner'
-	| 'skills'
+	'id' | 'company' | 'employment_type' | 'experience' | 'from_date' | 'language' | 'title'
 >;
 
 export function JobCard({
 	id,
 	company,
-	contact,
-	descr,
 	employment_type: employmentType,
 	experience,
 	from_date: fromDate,
-	function: jobFunction,
 	language,
-	linkedInCompanyId,
-	locations,
-	owner,
-	skills,
 	title,
-	urls,
 }: JobCardProps) {
 	const getDaysSincePublished = () => {
 		const publishedDate = new Date(fromDate);
