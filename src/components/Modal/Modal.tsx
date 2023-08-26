@@ -20,9 +20,9 @@ export function Modal() {
 		return () => clearTimeout(timerRef.current);
 	}, []);
 
-	if (isLoading) return 'Loading...';
+	if (isLoading) return <h1>Loading...</h1>;
 
-	if (error instanceof Error) return 'An error has occurred: ' + error.message;
+	if (error instanceof Error) return <h1>An error has occurred: {' ' + error.message}</h1>;
 
 	if (!data) {
 		return <h1>there is no job available at the moment :(</h1>;
