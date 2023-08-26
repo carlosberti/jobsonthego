@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import DOMPurify from 'dompurify';
 import * as Dialog from '@radix-ui/react-dialog';
-import { LinkedInLogoIcon, Share1Icon } from '@radix-ui/react-icons';
+import { LinkedInLogoIcon, Share1Icon, Cross2Icon } from '@radix-ui/react-icons';
 import * as Toast from '@radix-ui/react-toast';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 
@@ -106,17 +106,29 @@ export function Modal() {
 									dangerouslySetInnerHTML={{ __html: sanitizedSkills }}
 								/>
 							</div>
-							<Link
-								to={job.urls.ad}
-								target="_blank"
-								rel="noopener"
-								className="ml-auto mt-4 block w-fit rounded-md border border-zinc-900 p-2 font-medium text-zinc-900 transition-colors hover:bg-zinc-900 hover:text-white"
-							>
-								Apply now
-							</Link>
+							<div className="mt-4 flex items-baseline gap-3">
+								<Link
+									to={job.urls.ad}
+									target="_blank"
+									rel="noopener"
+									className="rounded-md border border-zinc-900 p-2 font-medium text-zinc-900 transition-colors hover:bg-zinc-900 hover:text-white"
+								>
+									Apply now
+								</Link>
+								<Link
+									type="email"
+									to={`mailto:${job.contact.email}?subject=Job%20application%20-%20${job.title}`}
+									className="p-2 font-medium text-sky-600 transition-colors hover:text-sky-800"
+								>
+									Contact us!
+								</Link>
+							</div>
 							<Dialog.Close asChild>
-								<Link to="/" className="absolute right-4 top-4">
-									X
+								<Link
+									to="/"
+									className="fixed bottom-6 right-6 rounded-full border border-black bg-stone-50 p-2 shadow-md hover:bg-stone-200 sm:bottom-[initial] sm:top-6"
+								>
+									<Cross2Icon className="h-6 w-6" />
 								</Link>
 							</Dialog.Close>
 						</div>
