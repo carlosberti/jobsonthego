@@ -7,6 +7,9 @@ module.exports = {
 			fontFamily: {
 				sans: ['Inter var', ...defaultTheme.fontFamily.sans],
 			},
+			gridTemplateColumns: {
+				'auto-fit': 'repeat(auto-fit, minmax(288px, 1fr))',
+			},
 		},
 	},
 	plugins: [],

@@ -52,7 +52,7 @@ export function JobCard({
 
 	return (
 		<Link to={`/job/${id}`}>
-			<div className="flex flex-col gap-2 rounded-md p-4 shadow-md sm:h-fit sm:min-w-[240px] sm:max-w-sm lg:p-5">
+			<div className="flex h-full flex-col gap-2 rounded-md p-4 shadow-md sm:p-5">
 				<div className="flex items-center gap-3">
 					{company.logo && <img src={company.logo} alt="Company logo" width={32} height={32} />}
 					<p className="line-clamp-1 text-zinc-900">{company.name}</p>
@@ -64,7 +64,7 @@ export function JobCard({
 					<p className="text-sm font-medium text-zinc-900">{experience}</p>
 					<p className="text-sm font-medium text-zinc-900">language: {language}</p>
 				</div>
-				<div className="border-t border-gray-200 pt-3">
+				<div className="mt-auto border-t border-gray-200 pt-3">
 					<p className="text-sm font-light text-zinc-900">{getDaysSincePublished()}</p>
 				</div>
 			</div>

@@ -39,7 +39,7 @@ export function Home() {
 	}
 
 	return (
-		<div className="flex flex-col gap-4 px-3 pb-6 sm:flex-row sm:flex-wrap sm:justify-center sm:px-6 sm:pb-8">
+		<div className="grid grid-cols-auto-fit justify-center gap-4 px-3 pb-6 sm:mt-2 sm:px-6 sm:pb-8">
 			{dataFromSearch.map(({ item }) => (
 				<JobCard key={item.id} {...item} />
 			))}
