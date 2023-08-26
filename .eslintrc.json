@@ -28,6 +28,11 @@
 						"position": "after"
 					},
 					{
+						"pattern": "@/test-utils",
+						"group": "internal",
+						"position": "before"
+					},
+					{
 						"pattern": "@/routes",
 						"group": "internal",
 						"position": "before"

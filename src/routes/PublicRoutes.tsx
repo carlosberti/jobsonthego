@@ -1,9 +1,9 @@
-import { Navigate, Outlet, createBrowserRouter } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
 import { Home } from '@/pages';
 import { Header, Modal } from '@/components';
 
-export const publicRoutes = createBrowserRouter([
+export const publicRoutes = [
 	{
 		path: '/',
 		element: (
@@ -32,4 +32,4 @@ export const publicRoutes = createBrowserRouter([
 			},
 		],
 	},
-]);
+];
