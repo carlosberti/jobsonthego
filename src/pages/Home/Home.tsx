@@ -16,7 +16,7 @@ export function Home() {
 
 	if (isLoading) return <h1>Loading...</h1>;
 
-	if (error instanceof Error) return <h1>An error has occurred: {' ' + error.message}</h1>;
+	if (error instanceof Error) throw new Error(error.message);
 
 	if (!data) {
 		return <h1>there is no job available at the moment :(</h1>;
@@ -29,7 +29,7 @@ export function Home() {
 	}
 
 	return (
-		<div className="grid grid-cols-auto-fit justify-center gap-4 px-3 pb-6 sm:mt-2 sm:px-6 sm:pb-8">
+		<div className="grid grid-cols-auto-fit justify-center gap-4 px-3 pb-6 sm:mt-2 sm:px-5 sm:pb-8">
 			{dataFromFuzzySearch.map(({ item }) => (
 				<JobCard key={item.id} {...item} />
 			))}

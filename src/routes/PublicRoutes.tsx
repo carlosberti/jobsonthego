@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from 'react-router-dom';
 
 import { Home } from '@/pages';
-import { Header, Modal } from '@/components';
+import { ErrorBoundary, Header, Modal } from '@/components';
 
 export const publicRoutes = [
 	{
@@ -10,7 +10,11 @@ export const publicRoutes = [
 			<>
 				<div className="mx-auto max-w-7xl sm:flex sm:min-h-[100dvh] sm:flex-col">
 					<Header />
-					<Home />
+					<ErrorBoundary
+						fallback={<h1>{`An error occurred when trying to display the job's list`}</h1>}
+					>
+						<Home />
+					</ErrorBoundary>
 				</div>
 				<Outlet />
 			</>
