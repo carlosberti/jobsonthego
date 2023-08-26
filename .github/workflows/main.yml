@@ -8,6 +8,8 @@ on:
 
 jobs:
   Build:
+    name: CI
+
     runs-on: ubuntu-latest
 
     strategy:
