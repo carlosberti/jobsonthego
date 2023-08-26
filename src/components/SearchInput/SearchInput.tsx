@@ -1,10 +1,14 @@
-import { Form } from 'react-router-dom';
+import { Form, useSubmit } from 'react-router-dom';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 
 export function SearchInput() {
+	const submit = useSubmit();
+
 	return (
 		<Form
-			method="get"
+			onChange={(event) => {
+				submit(event.currentTarget);
+			}}
 			className="relative flex-1 rounded-md border-2 border-gray-100  focus-within:border-blue-400 sm:w-[clamp(240px,60%,600px)] sm:flex-initial"
 		>
 			<label htmlFor="search">
