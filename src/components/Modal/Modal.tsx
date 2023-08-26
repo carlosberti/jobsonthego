@@ -42,21 +42,20 @@ export function Modal() {
 		<>
 			<Dialog.Root open>
 				<Dialog.Portal>
-					<Dialog.Overlay className="absolute inset-0 bg-gray-200/5 backdrop-blur-sm" asChild>
-						<Dialog.Close asChild>
-							<Link to="/" />
-						</Dialog.Close>
-					</Dialog.Overlay>
+					<Dialog.Overlay
+						className="fixed inset-0 sm:backdrop-blur-sm"
+						onClick={() => navigate('/')}
+					/>
 					<Dialog.Content
 						onEscapeKeyDown={() => navigate('/')}
-						className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-auto border-gray-200 bg-white focus:outline-none sm:bottom-16 sm:left-[50%] sm:top-16 sm:h-[initial] sm:w-[80%] sm:max-w-4xl sm:translate-x-[-50%] sm:rounded-md sm:border sm:drop-shadow-md"
+						className="fixed bottom-0 left-0 right-0 top-0 z-50 h-full w-full overflow-auto border-gray-200 bg-white focus:outline-none sm:bottom-16 sm:left-[50%] sm:top-16 sm:h-[initial] sm:w-[80%] sm:max-w-4xl sm:translate-x-[-50%] sm:rounded-md sm:border sm:drop-shadow-md"
 					>
 						{job.company.cover && (
 							<img
 								src={job.company.cover}
 								alt="Company cover"
 								height={256}
-								className="relative h-full max-h-64 w-full rounded-t-md object-cover"
+								className="relative h-full max-h-64 w-full object-cover sm:rounded-t-md"
 							/>
 						)}
 						<div className="p-6">
