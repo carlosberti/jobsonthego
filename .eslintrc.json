@@ -46,6 +46,11 @@
 						"pattern": "@/components",
 						"group": "internal",
 						"position": "before"
+					},
+					{
+						"pattern": "@/helpers",
+						"group": "internal",
+						"position": "before"
 					}
 				],
 				"pathGroupsExcludedImportTypes": ["internal", "react", "@radix-ui/*"],
