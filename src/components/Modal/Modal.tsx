@@ -48,7 +48,7 @@ export function Modal() {
 					/>
 					<Dialog.Content
 						onEscapeKeyDown={() => navigate('/')}
-						className="fixed bottom-0 left-0 right-0 top-0 z-50 h-full w-full overflow-auto border-gray-200 bg-white focus:outline-none sm:bottom-16 sm:left-[50%] sm:top-16 sm:h-[initial] sm:w-[80%] sm:max-w-4xl sm:translate-x-[-50%] sm:rounded-md sm:border sm:drop-shadow-md"
+						className="fixed bottom-0 left-0 right-0 top-0 z-50 h-full w-full overflow-auto border-gray-200 bg-white focus:outline-none sm:bottom-16 sm:left-[50%] sm:top-16 sm:h-fit sm:max-h-[calc(100%-128px)] sm:w-[80%] sm:max-w-4xl sm:translate-x-[-50%] sm:rounded-md sm:border sm:drop-shadow-md"
 					>
 						{job.company.cover && (
 							<img
