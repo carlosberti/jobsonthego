@@ -38,7 +38,9 @@
 	"devDependencies": {
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@craco/craco": "^7.1.0",
+		"@types/css-mediaquery": "^0.1.1",
 		"@types/dompurify": "^3.0.2",
+		"css-mediaquery": "^0.1.2",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-import": "^2.28.1",
 		"husky": "^8.0.0",
