@@ -7,7 +7,7 @@ import { LinkedInLogoIcon, Share1Icon, Cross2Icon } from '@radix-ui/react-icons'
 import * as Toast from '@radix-ui/react-toast';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 
-import { getJobsList } from '@/actions';
+import { getJobsList } from '@/services';
 
 export function Modal() {
 	const navigate = useNavigate();
