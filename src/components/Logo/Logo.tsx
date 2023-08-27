@@ -1,7 +1,7 @@
 export function Logo() {
 	return (
 		<>
-			<div className="hidden bg-slate-50 sm:block">
+			<div className="hidden sm:block">
 				<svg
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"

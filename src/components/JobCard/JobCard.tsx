@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { type JobData } from '@/actions';
+import { type JobData } from '@/services';
 
 export type JobCardProps = Pick<
 	JobData,

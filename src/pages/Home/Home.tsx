@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
-import { getJobsList } from '@/actions';
+import { getJobsList } from '@/services';
 import { JobCard } from '@/components';
 import { fuzzySearch } from '@/helpers';
 
