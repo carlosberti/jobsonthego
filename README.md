@@ -7,6 +7,10 @@ A simple platform where you can search for a new job, get in contact with recrui
 
 - [WebApp](https://jobsonthego.carlosberti.dev/)
 
+## FYI
+
+Worth to mention that I'm not using a state managment tool because it was not needed. I would use context fopr session maybe, and probably zustand as main state management!
+
 ## Installation
 
 First of all you need to have nodejs installed. So, if you don't have it, install with you package manager or download it from [nodejs](https://nodejs.org/en/) and install.
