@@ -12,7 +12,10 @@ export function SearchInput() {
 			className="relative flex-1 rounded-md border border-gray-200 bg-slate-100  focus-within:border-blue-400 sm:w-[clamp(240px,60%,600px)] sm:flex-initial"
 		>
 			<label htmlFor="search">
-				<MagnifyingGlassIcon className="absolute left-1 top-[50%] h-5 w-5 translate-y-[-50%] text-gray-400" />
+				<MagnifyingGlassIcon
+					aria-label="search"
+					className="absolute left-1 top-[50%] h-5 w-5 translate-y-[-50%] text-gray-400"
+				/>
 			</label>
 			<input
 				id="search"
