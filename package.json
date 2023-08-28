@@ -8,6 +8,7 @@
 		"test": "craco test",
 		"test:ci": "craco test --runInBand",
 		"eject": "craco eject",
+		"generate": "plop --plopfile ./generators/plopfile.js",
 		"lint": "eslint . --fix --max-warnings=0",
 		"typecheck": "tsc",
 		"format": "prettier . --write",
@@ -46,6 +47,7 @@
 		"eslint-plugin-import": "^2.28.1",
 		"husky": "^8.0.0",
 		"lint-staged": "^14.0.1",
+		"plop": "^3.1.2",
 		"prettier": "3.0.2",
 		"prettier-plugin-tailwindcss": "^0.5.3",
 		"tailwindcss": "^3.3.3"
