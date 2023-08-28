@@ -1,3 +1,4 @@
+# JobsOnTheGo
 > Find your next job!
 
 A simple platform where you can search for a new job, get in contact with recruiter and apply to it.
