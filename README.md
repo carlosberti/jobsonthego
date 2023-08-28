@@ -9,7 +9,7 @@ A simple platform where you can search for a new job, get in contact with recrui
 
 ## FYI
 
-Worth to mention that I'm not using a state managment tool because it was not needed. I would use context fopr session maybe, and probably zustand as main state management!
+Worth to mention that I'm not using a state managment tool because it was not needed. I would use context for session maybe, and probably zustand as main state management that would be my personal choice. i've used redux, zustand, mobx, etc... Currently I work on a big project where we have a few set of contexts and the state 'managed' by relay queries, so all depends on how the project will evolve and what the team knows works better with
 
 ## Installation
 
