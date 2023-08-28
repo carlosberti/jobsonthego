@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
@@ -40,3 +40,20 @@ jobs:
 
       - name: Build
         run: npm run build
+
+  cypress-run:
+	  name: E2E
+
+		runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+				with:
+          browser: chrome
+          build: npm run start
+          wait-on: "http://localhost:3000"
+					wait-on-timeout: 120
