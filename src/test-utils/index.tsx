@@ -39,7 +39,9 @@ export function renderWithRouter(children: any, routes = []) {
 		initialIndex: 1,
 	});
 
-	return render(<RouterProvider router={router} />);
+	render(<RouterProvider router={router} />);
+
+	return { router };
 }
 
 export * from '@testing-library/react';
