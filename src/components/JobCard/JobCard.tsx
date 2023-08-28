@@ -4,8 +4,10 @@ import { type JobData } from '@/services';
 
 export type JobCardProps = Pick<
 	JobData,
-	'id' | 'company' | 'employment_type' | 'experience' | 'from_date' | 'language' | 'title'
->;
+	'id' | 'employment_type' | 'experience' | 'from_date' | 'language' | 'title'
+> & {
+	company: Pick<JobData['company'], 'name' | 'logo' | 'industry'>;
+};
 
 export function JobCard({
 	id,
